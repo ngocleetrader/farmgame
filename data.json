@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "title": "Nông Trại 1 Mùa",
+    "village": "Oakshire Valley",
+    "player": "Arthur",
+    "seasonLength": 30,
+    "seasonGoal": 700,
+    "startingCoins": 420,
+    "startingEnergy": 12,
+    "maxEnergy": 12,
+    "world": { "width": 3840, "height": 2160 },
+    "spawn": { "x": 1750, "y": 1450 },
+    "mapCameraStart": { "x": 0, "y": 390 },
+    "plotPositions": [
+      { "x": 13.0, "y": 54.4 }, { "x": 10.2, "y": 56.6 }, { "x": 7.3, "y": 59.1 },
+      { "x": 22.4, "y": 62.4 }, { "x": 19.6, "y": 64.6 }, { "x": 16.7, "y": 67.2 },
+      { "x": 14.1, "y": 71.8 }, { "x": 11.1, "y": 73.0 }, { "x": 8.0, "y": 75.7 },
+      { "x": 32.0, "y": 70.2 }, { "x": 29.2, "y": 72.7 }, { "x": 26.4, "y": 75.2 },
+      { "x": 20.8, "y": 81.0 }, { "x": 18.5, "y": 82.9 }, { "x": 16.4, "y": 84.8 }
+    ],
+    "hotspots": {
+      "house": { "x": 37, "y": 55, "w": 10, "h": 14, "radius": 200 },
+      "mill": { "x": 82, "y": 24, "w": 17, "h": 18, "radius": 200 },
+      "barn": { "x": 78, "y": 34, "w": 17, "h": 14, "radius": 220 },
+      "pond": { "x": 83, "y": 85, "w": 33, "h": 27, "radius": 360 },
+      "market": { "x": 67, "y": 48, "w": 17, "h": 18, "radius": 180 },
+      "madeline": { "x": 76, "y": 45, "w": 4, "h": 6, "radius": 110 },
+      "barnaby": { "x": 90, "y": 34, "w": 4, "h": 6, "radius": 110 },
+      "eleanor": { "x": 52, "y": 31, "w": 4, "h": 6, "radius": 110 },
+      "cedric": { "x": 69, "y": 43, "w": 4, "h": 6, "radius": 110 }
+    },
+    "navigation": {
+      "cellSize": 80,
+      "obstacles": [
+        { "id": "house", "points": [[31,35],[42,35],[43,43],[42,51],[33,52],[30,45]] },
+        { "id": "windmill", "points": [[73,7],[89,7],[90,16],[88,20],[74,20],[72,16]] },
+        { "id": "barn", "points": [[69,18],[87,18],[88,26],[86,31],[71,31],[68,26]] },
+        { "id": "tree-west", "points": [[3,26],[9,25],[12,30],[11,35],[8,37],[3,35],[1,30]] },
+        { "id": "tree-center-west", "points": [[29,22],[36,22],[39,28],[38,34],[32,35],[28,30]] },
+        { "id": "tree-center-east", "points": [[51,22],[58,22],[61,28],[60,34],[54,35],[50,30]] },
+        { "id": "well-west", "points": [[21,37],[28,36],[30,43],[28,48],[22,48],[20,43]] },
+        { "id": "well-river", "points": [[61,68],[67,67],[69,74],[67,78],[62,78],[60,73]] },
+        { "id": "fence-east", "points": [[12.5,50.5],[13.5,49.8],[38.2,68.3],[37.4,69.2]] },
+        { "id": "stone-wall", "points": [[67,57],[72,55],[76,59],[74,63],[69,63],[66,60]] },
+        { "id": "river", "points": [[64,85],[69,81],[77,79],[84,77],[91,74],[100,69],[100,100],[64,100]] },
+        { "id": "apiary", "requires": "apiary", "points": [[53,61],[59,60],[61,65],[59,70],[54,69],[52,65]] }
+      ],
+      "lanes": [
+        [[35,60],[43,63],[51,66],[60,62],[68,56],[77,50]],
+        [[65,50],[71,42],[76,32],[82,22]],
+        [[68,56],[73,65],[81,73],[86,82]],
+        [[35,60],[30,55],[26,49],[21,45],[17,44]],
+        [[38,62],[32,69],[26,76],[19,84]]
+      ]
+    }
+  },
+  "weather": [
+    { "id": "sunny", "name": "NẮNG 28°C", "icon": "☀️", "wind": "GIÓ NHẸ 12KM/H", "growth": 1.0, "price": 1.0 },
+    { "id": "cloudy", "name": "NHIỀU MÂY 24°C", "icon": "🌥️", "wind": "GIÓ ÊM 8KM/H", "growth": 1.0, "price": 1.0 },
+    { "id": "rain", "name": "MƯA NHẸ 21°C", "icon": "🌧️", "wind": "GẦN NHƯ LẶNG GIÓ", "growth": 1.35, "price": 1.08 },
+    { "id": "storm", "name": "BÃO ĐẦU MÙA 18°C", "icon": "⛈️", "wind": "GIÓ GIẬT 38KM/H", "growth": 0.5, "price": 1.3 },
+    { "id": "dry", "name": "NẮNG GẮT 34°C", "icon": "🌞", "wind": "GIÓ KHÔ 16KM/H", "growth": 0.7, "price": 1.2 }
+  ],
+  "events": [
+    { "day": 1, "name": "MÙA XUÂN ĐÃ VỀ", "description": "Bắt đầu mùa đầu tiên tại Oakshire Valley." },
+    { "day": 10, "name": "MƯA SAO BĂNG", "description": "Cây trồng được gieo hôm nay lớn nhanh gấp đôi qua đêm.", "growth": 2 },
+    { "day": 15, "name": "HỘI CHỢ MÙA XUÂN", "description": "Giá bán nông sản hôm nay tăng 25%.", "sell": 1.25 },
+    { "day": 22, "name": "BÃO ĐẦU MÙA", "description": "Nhớ thu hoạch cây chín và gia cố chuồng trại.", "weather": "storm" },
+    { "day": 28, "name": "LỄ HỘI THU HOẠCH", "description": "Hoàn thành đơn hàng để nhận thưởng đặc biệt.", "sell": 1.5 }
+  ],
+  "crops": [
+    { "id": "cabbage", "name": "Cải bắp", "group": "Rau ngắn ngày", "stages": ["🌰", "🌱", "🥬", "🥬"], "days": 1, "yield": 2, "price": 14, "seedPrice": 6, "water": 1, "season": "Xuân", "unlock": "Mở đầu" },
+    { "id": "carrot", "name": "Cà rốt", "group": "Rau ngắn ngày", "stages": ["🌰", "🌱", "🌿", "🥕"], "days": 3, "yield": 2, "price": 18, "seedPrice": 8, "water": 1, "season": "Xuân", "unlock": "Mở đầu" },
+    { "id": "potato", "name": "Khoai tây", "group": "Rau ngắn ngày", "stages": ["🌰", "🌱", "🥔", "🥔"], "days": 4, "yield": 2, "price": 22, "seedPrice": 10, "water": 1, "season": "Xuân", "unlock": "Mở đầu" },
+    { "id": "corn", "name": "Ngô ngọt", "group": "Nguyên liệu xưởng", "stages": ["🌰", "🌱", "🌿", "🌽"], "days": 5, "yield": 2, "price": 19, "seedPrice": 12, "water": 1, "season": "Xuân / Hè", "unlock": "Mở đầu" },
+    { "id": "wheat", "name": "Lúa mì", "group": "Nguyên liệu xưởng", "stages": ["🌰", "🌱", "🌾", "🌾"], "days": 5, "yield": 3, "price": 16, "seedPrice": 11, "water": 1, "season": "Xuân / Hè", "unlock": "Mở đầu" },
+    { "id": "rice", "name": "Lúa nước", "group": "Nguyên liệu xưởng", "stages": ["🌰", "🌱", "🌿", "🌾"], "days": 6, "yield": 3, "price": 18, "seedPrice": 13, "water": 2, "season": "Xuân / Hè", "unlock": "Cấp 2" },
+    { "id": "tomato", "name": "Cà chua", "group": "Rau quả", "stages": ["🌰", "🌱", "🌿", "🍅"], "days": 6, "yield": 3, "price": 20, "seedPrice": 14, "water": 1, "season": "Xuân / Hè", "unlock": "Thu hoạch 5 cây" },
+    { "id": "onion", "name": "Hành tây", "group": "Rau ngắn ngày", "stages": ["🌰", "🌱", "🌿", "🧅"], "days": 4, "yield": 2, "price": 21, "seedPrice": 13, "water": 1, "season": "Xuân", "unlock": "Giấy phép 45 xu" },
+    { "id": "strawberry", "name": "Dâu tây", "group": "Rau quả", "stages": ["🌰", "🌱", "🌿", "🍓"], "days": 7, "yield": 3, "price": 28, "seedPrice": 20, "water": 1, "season": "Xuân", "regrow": 3, "unlock": "Thu hoạch 10 cây" },
+    { "id": "beet", "name": "Củ dền", "group": "Rau quả", "stages": ["🌰", "🌱", "🌿", "🫜"], "days": 5, "yield": 2, "price": 24, "seedPrice": 15, "water": 1, "season": "Xuân", "unlock": "Cấp 2" },
+    { "id": "pumpkin", "name": "Bí đỏ", "group": "Cây dài ngày", "stages": ["🌰", "🌱", "🌿", "🎃"], "days": 9, "yield": 3, "price": 38, "seedPrice": 24, "water": 1, "season": "Hè", "unlock": "Giấy phép 70 xu" },
+    { "id": "sugarcane", "name": "Mía", "group": "Nguyên liệu xưởng", "stages": ["🌰", "🌱", "🎋", "🎋"], "days": 8, "yield": 3, "price": 31, "seedPrice": 20, "water": 2, "season": "Hè", "regrow": 4, "unlock": "Cấp 3" },
+    { "id": "cucumber", "name": "Dưa leo", "group": "Rau quả", "stages": ["🌰", "🌱", "🌿", "🥒"], "days": 5, "yield": 3, "price": 19, "seedPrice": 13, "water": 1, "season": "Xuân / Hè", "regrow": 2, "unlock": "Cấp 2" },
+    { "id": "sunflower", "name": "Hướng dương", "group": "Cây dài ngày", "stages": ["🌰", "🌱", "🌿", "🌻"], "days": 7, "yield": 2, "price": 34, "seedPrice": 20, "water": 1, "season": "Hè", "unlock": "Giấy phép 65 xu" },
+    { "id": "blueberry", "name": "Việt quất", "group": "Rau quả", "stages": ["🌰", "🌱", "🌿", "🫐"], "days": 8, "yield": 3, "price": 32, "seedPrice": 23, "water": 1, "season": "Hè", "regrow": 3, "unlock": "Thu hoạch 15 cây" }
+  ],
+  "hotbar": [
+    { "id": "water", "name": "Thùng nước bằng gỗ", "icon": "🪣", "count": 8, "description": "Tưới cây đã gieo · tiêu hao 1 thể lực" },
+    { "id": "hoe", "name": "Cuốc đất sắt", "icon": "⛏️", "count": 1, "description": "Đào luống đất · tiêu hao 1 thể lực" },
+    { "id": "seeds", "name": "Túi hạt giống", "icon": "🌱", "count": 8, "description": "Gieo hạt cải bắp đang chọn · phím E" },
+    { "id": "scythe", "name": "Liềm thu hoạch", "icon": "🪓", "count": 92, "description": "Thu cây chín gần Arthur · phím Space" },
+    { "id": "fertilizer", "name": "Phân hữu cơ", "icon": "✨", "count": 6, "description": "Cây nhận phân có thể cho thu hoạch gấp đôi" },
+    { "id": "lunch", "name": "Cơm trưa bác thợ", "icon": "🍱", "count": 2, "description": "Hồi phục 6 thể lực" },
+    { "id": "tea", "name": "Trà hoa cúc", "icon": "🍵", "count": 1, "description": "Hồi 3 thể lực" }
+  ],
+  "workshops": [
+    { "id": "kitchen", "name": "Bếp nông trại", "icon": "🍳", "cost": 180, "description": "Món ăn hồi thể lực và đơn hàng dân làng.", "firstRecipe": "cabbage-salad" },
+    { "id": "mill", "name": "Cối xay gió", "icon": "🌬️", "cost": 160, "description": "Xay ngô và lúa mì thành nguyên liệu có giá trị.", "firstRecipe": "corn-flour" },
+    { "id": "oven", "name": "Lò nướng", "icon": "🔥", "cost": 190, "description": "Nướng rau củ để tăng giá bán.", "firstRecipe": "roasted-carrot" },
+    { "id": "cellar", "name": "Hầm ủ", "icon": "🛢️", "cost": 220, "description": "Muối chua và ủ trái cây qua ngày.", "firstRecipe": "pickled-cabbage" }
+  ],
+  "recipes": [
+    { "id": "cabbage-salad", "name": "Salad cải", "icon": "🥗", "workshop": "kitchen", "inputs": { "cabbage": 2 }, "output": "cabbage-salad", "amount": 1, "value": 42, "days": 0, "profit": 50, "unlock": "Có ngay khi xây Bếp" },
+    { "id": "corn-flour", "name": "Bột ngô", "icon": "🟡", "workshop": "mill", "inputs": { "corn": 2 }, "output": "corn-flour", "amount": 1, "value": 55, "days": 0, "profit": 45, "unlock": "Có ngay khi xây Cối xay" },
+    { "id": "roasted-carrot", "name": "Cà rốt nướng", "icon": "🥕", "workshop": "oven", "inputs": { "carrot": 2 }, "output": "roasted-carrot", "amount": 1, "value": 56, "days": 0, "profit": 56, "unlock": "Có ngay khi xây Lò nướng" },
+    { "id": "pickled-cabbage", "name": "Cải muối chua", "icon": "🫙", "workshop": "cellar", "inputs": { "cabbage": 3 }, "output": "pickled-cabbage", "amount": 1, "value": 70, "days": 2, "profit": 67, "unlock": "Có ngay khi xây Hầm ủ" },
+    { "id": "cornbread", "name": "Bánh ngô", "icon": "🫓", "workshop": "oven", "inputs": { "corn-flour": 1, "egg": 1 }, "output": "cornbread", "amount": 1, "value": 88, "days": 1, "profit": 60, "unlock": "Cấp 2" },
+    { "id": "berry-jam", "name": "Mứt dâu", "icon": "🍯", "workshop": "cellar", "inputs": { "strawberry": 3 }, "output": "berry-jam", "amount": 1, "value": 156, "days": 2, "profit": 86, "unlock": "Thu hoạch 10 dâu tây" },
+    { "id": "tomato-sauce", "name": "Sốt cà chua", "icon": "🍝", "workshop": "kitchen", "inputs": { "tomato": 3 }, "output": "tomato-sauce", "amount": 1, "value": 96, "days": 1, "profit": 60, "unlock": "Thu hoạch 5 cà chua" },
+    { "id": "baked-potato", "name": "Khoai tây nướng", "icon": "🥔", "workshop": "oven", "inputs": { "potato": 2 }, "output": "baked-potato", "amount": 1, "value": 72, "days": 0, "profit": 64, "unlock": "Cấp 2" },
+    { "id": "flour", "name": "Bột mì", "icon": "🌾", "workshop": "mill", "inputs": { "wheat": 2 }, "output": "flour", "amount": 1, "value": 58, "days": 0, "profit": 81, "unlock": "Cấp 2" },
+    { "id": "bread", "name": "Bánh mì nhà quê", "icon": "🍞", "workshop": "oven", "inputs": { "flour": 1, "egg": 1 }, "output": "bread", "amount": 1, "value": 110, "days": 1, "profit": 77, "unlock": "Cấp 3" },
+    { "id": "rice-meal", "name": "Cơm rau", "icon": "🍚", "workshop": "kitchen", "inputs": { "rice": 1, "carrot": 2 }, "output": "rice-meal", "amount": 2, "value": 56, "days": 0, "profit": 50, "unlock": "Cấp 2" },
+    { "id": "cheese", "name": "Phô mai", "icon": "🧀", "workshop": "cellar", "inputs": { "milk": 2 }, "output": "cheese", "amount": 1, "value": 82, "days": 2, "profit": 113, "unlock": "Xây chuồng bò" },
+    { "id": "carrot-soup", "name": "Súp cà rốt", "icon": "🍲", "workshop": "kitchen", "inputs": { "carrot": 2, "cabbage": 1 }, "output": "carrot-soup", "amount": 2, "value": 82, "days": 0, "profit": 60, "unlock": "Cấp 2" },
+    { "id": "grilled-fish", "name": "Cá nướng than", "icon": "🐟", "workshop": "kitchen", "inputs": { "perch": 2 }, "output": "grilled-fish", "amount": 1, "value": 90, "days": 0, "profit": 80, "unlock": "Câu được cá Rô" }
+  ],
+  "animals": [
+    { "id": "chicken", "name": "Gà mái", "icon": "🐔", "cost": 120, "building": "coop", "feed": "corn", "product": "egg", "productName": "Trứng", "rate": 1 },
+    { "id": "cow", "name": "Bò sữa", "icon": "🐄", "cost": 260, "building": "barn", "feed": "wheat", "product": "milk", "productName": "Sữa", "rate": 1 },
+    { "id": "bee", "name": "Tổ ong", "icon": "🐝", "cost": 220, "building": "apiary", "feed": "sunflower", "product": "honey", "productName": "Mật ong", "rate": 1 },
+    { "id": "sheep", "name": "Cừu len", "icon": "🐑", "cost": 240, "building": "barn", "feed": "wheat", "product": "wool", "productName": "Len", "rate": 1 }
+  ],
+  "workers": [
+    { "id": "gardener", "name": "Người làm vườn", "icon": "🧑‍🌾", "hireCost": 180, "wage": 12, "effect": "Tự tưới tất cả cây trồng mỗi ngày trước khi cây phát triển." },
+    { "id": "harvester", "name": "Người thu hoạch", "icon": "🧺", "hireCost": 260, "wage": 18, "effect": "Thu gom toàn bộ cây chín vào kho khi kết thúc ngày." },
+    { "id": "rancher", "name": "Người chăn nuôi", "icon": "🐄", "hireCost": 220, "wage": 14, "effect": "Chăm vật nuôi; mỗi con được cho ăn tạo thêm 1 sản phẩm." }
+  ],
+  "buildings": [
+    { "id": "coop", "name": "Chuồng gà", "icon": "🐔", "cost": 240, "description": "Nuôi gà; cho ăn ngô mỗi ngày để nhận trứng." },
+    { "id": "barn", "name": "Chuồng bò & cừu", "icon": "🐄", "cost": 420, "description": "Cần xây chuồng trước khi mua bò hoặc cừu." },
+    { "id": "apiary", "name": "Vườn ong", "icon": "🐝", "cost": 300, "description": "Ong cần hoa hướng dương để làm mật." }
+  ],
+  "villagers": [
+    { "id": "madeline", "name": "Madeline Miller", "role": "Thợ làm bánh", "icon": "👩🏻‍🍳", "favorite": "strawberry", "greeting": "Chào Arthur! Có dâu tây tươi thì mang cho tôi nhé.", "orders": ["cabbage", "carrot", "strawberry"] },
+    { "id": "barnaby", "name": "Barnaby Thatcher", "role": "Chủ quán rượu", "icon": "🧔🏻", "favorite": "corn", "greeting": "Một bữa tối ngon luôn bắt đầu từ nông sản tốt.", "orders": ["corn", "potato", "cabbage"] },
+    { "id": "eleanor", "name": "Eleanor Vance", "role": "Cô giáo", "icon": "👩🏼‍🏫", "favorite": "wheat", "greeting": "Lũ trẻ đang học cách trồng lúa mì đấy.", "orders": ["wheat", "carrot", "onion"] },
+    { "id": "cedric", "name": "Cedric Sterling", "role": "Thương nhân", "icon": "🧑🏻‍💼", "favorite": "tomato", "greeting": "Tôi có vài món hàng hiếm, đổi lấy nông sản chứ?", "orders": ["tomato", "potato", "corn"] }
+  ],
+  "fish": [
+    { "id": "perch", "name": "Cá Rô", "icon": "🐟", "price": 25, "chance": 40 },
+    { "id": "catfish", "name": "Cá Trê", "icon": "🐠", "price": 35, "chance": 30 },
+    { "id": "carp", "name": "Cá Chép", "icon": "🐡", "price": 60, "chance": 22 },
+    { "id": "goldfish", "name": "Cá Vàng", "icon": "🐠", "price": 150, "chance": 8 }
+  ],
+  "tutorial": [
+    { "id": "plant", "title": "Gieo 1 cây cải bắp", "description": "B\u1ea5m v\u00e0o lu\u1ed1ng \u0111\u1ea5t tr\u1ed1ng, ch\u1ecdn h\u1ea1t gi\u1ed1ng trong kho r\u1ed3i gieo.", "verb": "plant", "target": 1, "reward": { "coins": 15, "xp": 5 } },
+    { "id": "water", "title": "Tưới hạt vừa gieo", "description": "Tới gần cây cải bắp và tưới một gáo nước.", "verb": "water", "target": 1, "reward": { "coins": 15, "xp": 5 } },
+    { "id": "sleep", "title": "Ngủ qua một ngày", "description": "Nhấn Nghỉ để qua ngày. Cây đã tưới sẽ lớn thêm.", "verb": "sleep", "target": 1, "reward": { "coins": 20, "xp": 5 } },
+    { "id": "harvest", "title": "Thu hoạch cải bắp", "description": "Cây chín phát sáng. Đứng gần cây rồi nhấn Space.", "verb": "harvest", "target": 1, "reward": { "coins": 25, "xp": 10 } },
+    { "id": "sell", "title": "Bán nông sản ở chợ", "description": "Tới chợ làng, chọn nông sản và bán một phần.", "verb": "sell", "target": 1, "reward": { "coins": 35, "xp": 10 } },
+    { "id": "build", "title": "Xây xưởng đầu tiên", "description": "Xây Bếp, Cối xay, Lò nướng hoặc Hầm ủ để bắt đầu chế biến.", "verb": "build", "target": 1, "reward": { "coins": 50, "xp": 20 } }
+  ],
+  "startingInventory": {
+    "seeds": { "cabbage": 8, "carrot": 4, "corn": 4, "wheat": 4, "potato": 0, "rice": 0, "tomato": 0, "onion": 0, "strawberry": 0, "beet": 0, "pumpkin": 0, "sugarcane": 0, "cucumber": 0, "sunflower": 0, "blueberry": 0 },
+    "produce": { "cabbage": 0, "carrot": 0, "corn": 0, "wheat": 0, "potato": 0, "rice": 0, "tomato": 0, "onion": 0, "strawberry": 0, "beet": 0, "pumpkin": 0, "sugarcane": 0, "cucumber": 0, "sunflower": 0, "blueberry": 0 },
+    "goods": { "cabbage-salad": 0, "corn-flour": 0, "roasted-carrot": 0, "pickled-cabbage": 0, "cornbread": 0, "berry-jam": 0, "tomato-sauce": 0, "baked-potato": 0, "flour": 0, "bread": 0, "rice-meal": 0, "cheese": 0, "carrot-soup": 0, "grilled-fish": 0, "egg": 0, "milk": 0, "honey": 0, "wool": 0, "perch": 0, "catfish": 0, "carp": 0, "goldfish": 0 }
+  }
+}
