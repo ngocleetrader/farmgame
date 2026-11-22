@@ -1,10 +1,10 @@
-# Nông Trại 1 Mùa — Oakshire Valley
+# Nông Trại 1 Mùa — Oakshire Valley (3D)
+
+Bản 3D diorama (Three.js): camera góc cao ~58°, tilt-shift, màu pastel, map mở rộng (cầu gỗ, hồ, đảo rương, cột đá phát sáng dịch chuyển), art phong cách cartoon isometric viền nâu mềm — nhà bản 5 (chuồng đỏ lớn, khung gỗ trắng, cối xay gió), Arthur bản 4 (khăn bandana đỏ, cầm chĩa), bò bản 5 (Jersey nâu nhạt gặm cỏ).
 
 ## Chạy game
 
-Game tải `data.json` bằng `fetch`, vì vậy cần chạy qua web server, không mở `index.html` trực tiếp bằng `file://`.
-
-Trong PowerShell, chạy:
+`index.html` là file duy nhất, tự chứa toàn bộ code + dữ liệu (Three.js nhúng local, không cần CDN). Vẫn cần chạy qua web server (không mở bằng `file://`):
 
 ```powershell
 cd C:\Users\Admin\farm-game
@@ -15,18 +15,17 @@ Mở <http://localhost:8931> trong trình duyệt. Nhấn `Ctrl+C` để dừng 
 
 ## Phím điều khiển
 
-- `WASD` hoặc phím mũi tên: đi bộ; `Shift`: chạy; nhấp vào bản đồ: đi tới vị trí đó.
-- Click an empty plot to choose a seed; click a planted crop to water or harvest it.
-- `E`: plant at the nearest plot; `F`: water; `Space`: harvest; `B`: workshops; `M`: hire workers; `P`: go fish; `Esc`: sleep.
-- `I`: open storage; `Q`: quests; `C`: villagers; `Z`: auto farm; `K`: handbook; `M`: workers; `P`: fishing.
-- Trên điện thoại, dùng joystick và nút hành động trên màn hình.
+- `WASD` hoặc phím mũi tên: đi bộ; `Shift`: chạy; chạm/click vào bản đồ: đi tới vị trí đó (không còn joystick).
+- Click ô đất trống để chọn hạt; click cây đã trồng để tưới/thu hoạch; click ao để câu cá.
+- `E`: gieo; `F`: tưới; `Space`: thu hoạch; `B`: xưởng chế biến; `M`: thuê nhân công; `P`: câu cá; `Esc`: ngủ.
+- `I`: kho; `Q`: nhiệm vụ; `C`: dân làng; `Z`: tự farm; `K`: sổ tay.
+- Không có thanh máu/tim. Thời tiết thật (nắng/mưa/âm u/gió) đổi cả hiệu ứng lẫn màu cảnh.
 
-## File chính
+## Luật chơi
 
-- `index.html`: cấu trúc màn chơi.
-- `styles.css`: giao diện pixel-art và responsive.
-- `app.js`: di chuyển, trồng trọt, thời tiết, chế biến, chợ, làng, câu cá và lưu game.
-- `data.json`: cây trồng, công thức, thời tiết, sự kiện, vật nuôi, đơn hàng và nhiệm vụ.
-- `assets/farm-map-v2.png`: background map with 15 aligned planting spots.
+1 mùa 30 ngày, 15 ô đất, 15 cây, 14 công thức chế biến, nhân công ăn cơm, 4 dân làng + đơn hàng mỗi sáng, sự kiện ngày 10/15/22/28, ao câu cá 4 loại cá, chợ. Tiến trình tự lưu trong `localStorage` (`nong-trai-1-mua-save-v16`). Đăng nhập Google, đồng bộ đám mây và quảng cáo thật chưa được nối trong bản demo.
 
-Tiến trình tự lưu trong `localStorage` của trình duyệt. Sổ tay cho phép tạo mã lưu để chuyển tiến trình sang thiết bị khác. Đăng nhập Google, đồng bộ đám mây và quảng cáo thật chưa được nối trong bản demo.
+## File
+
+- `index.html`: toàn bộ game 3D (file duy nhất).
+- `v16-2d/`: bản 2D DOM v16 cũ (index.html, styles.css, app.js, data.json, assets/) — giữ lại làm lịch sử, không dùng cho bản 3D.
